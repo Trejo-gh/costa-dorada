@@ -1,0 +1,137 @@
+/* GENERAL */
+body{
+    margin:0;
+    font-family:Arial;
+    background:#f4fbff;
+}
+
+section{
+    padding:90px 12%;
+}
+
+h2{
+    text-align:center;
+}
+
+/* HEADER */
+header{
+    background:#5d91ba;
+    padding:20px 60px;
+}
+
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+nav h1,
+nav a{
+    color:white;
+}
+
+nav ul{
+    display:flex;
+    gap:30px;
+    list-style:none;
+}
+
+nav a{
+    text-decoration:none;
+}
+
+/* INICIO */
+#inicio{
+    height:650px;
+    background:
+    linear-gradient(rgba(0,0,0,.25),rgba(0,0,0,.25)),
+    url("../img/playa.jpg") center/cover;
+
+    color:white;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+}
+
+#inicio h2{
+    font-size:70px;
+}
+
+#inicio p{
+    font-size:25px;
+}
+
+/* SECCIONES */
+#nosotros,
+#promociones,
+#menu{
+    background:white;
+}
+
+#nosotros p,
+#promociones{
+    text-align:center;
+}
+
+#nosotros p{
+    max-width:900px;
+    margin:40px auto;
+}
+
+/* SERVICIOS */
+#servicios{
+    background:#d7ebf8;
+    display:grid;
+    grid-template-columns:repeat(2,350px);
+    justify-content:center;
+    gap:40px;
+}
+
+#servicios h2{
+    grid-column:span 2;
+}
+
+article{
+    background:white;
+    padding:40px;
+    border-radius:25px;
+    text-align:center;
+}
+
+/* OPINIONES Y CONTACTO */
+main section:nth-child(5),
+#contacto{
+    background:#d7ebf8;
+    text-align:center;
+}
+
+/* MENU */
+#menu ul{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:20px;
+}
+
+#menu li{
+    background:#5d91ba;
+    color:white;
+    padding:30px;
+    border-radius:20px;
+}
+
+/* BOTON */
+button{
+    padding:15px 40px;
+    border:none;
+    border-radius:40px;
+}
+
+/* FOOTER */
+footer{
+    background:#34536d;
+    color:white;
+    text-align:center;
+    padding:50px;
+}
