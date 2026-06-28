@@ -2,74 +2,442 @@
 <html lang="es">
 
 <head>
+
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Costa Dorada Resort</title>
+
     <link rel="stylesheet" href="css/style.css">
+
+    <!-- Tipografías -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
 </head>
 
 <body>
 
 <header>
-    <nav>
-        <h1>COSTA DORADA RESORT</h1>
 
-        <ul>
-            <li><a href="#inicio">Inicio</a></li>
-            <li><a href="#servicios">Servicios</a></li>
-            <li><a href="#promociones">Promociones</a></li>
-            <li><a href="#menu">Menú</a></li>
-            <li><a href="#contacto">Contacto</a></li>
-        </ul>
+    <nav class="navbar">
+
+        <div class="logo">
+
+            <img src="img/logo.png" alt="Costa Dorada Resort">
+
+           
+
+        </div>
+
+       <ul class="menu">
+
+    <li><a href="#inicio">Inicio</a></li>
+
+    <li><a href="#entretenimiento">Entretenimiento</a></li>
+
+    <li><a href="ofertas.html">Ofertas</a></li>
+
+    <li><a href="#resenas">Reseñas</a></li>
+
+    <li><a href="#contacto">Contacto</a></li>
+
+</ul>
+
     </nav>
+
 </header>
 
-<main>
+<!-- ================= HERO ================= -->
 
-<section id="inicio">
-    <h2>Tu paraíso frente al Pacífico</h2>
-    <p>Vive momentos únicos frente al mar.</p>
+<section class="hero" id="inicio">
+
+    <img src="img/hero.jpg" alt="Playa" class="hero-img">
+
+    <div class="overlay"></div>
+
+    <div class="hero-texto">
+
+        <h1>Costa Dorada Resort</h1>
+
+        <p>
+
+            Donde el lujo, el confort y el océano crean momentos inolvidables.
+
+        </p>
+
+
+    </div>
+
 </section>
 
-<section id="nosotros">
-    <h2>Sobre nosotros</h2>
-    <p>Descanso, comodidad y entretenimiento.</p>
+<!-- =========== RANCHOS Y HOTEL =========== -->
+
+<section class="opciones">
+
+    <h2>
+
+        ¿Qué deseas reservar?
+
+    </h2>
+
+    <p>
+
+        Elige la experiencia perfecta para tus vacaciones.
+
+    </p>
+
+    <div class="contenedor-opciones">
+
+        <div class="opcion">
+
+            <img src="img/rancho.jpg" alt="Ranchos">
+
+            <h3>Ranchos</h3>
+
+            <p>
+
+                Espacios frente al mar ideales para pasar un día inolvidable.
+
+            </p>
+
+            <a href="ranchos.html" class="btn">
+
+                Ver Ranchos
+
+            </a>
+
+        </div>
+
+        <div class="opcion">
+
+            <img src="img/hotel.jpg" alt="Hotel">
+
+            <h3>Hotel</h3>
+
+            <p>
+
+                Habitaciones elegantes con todas las comodidades que necesitas.
+
+            </p>
+
+            <a href="hotel.html" class="btn">
+
+                Ver Hotel
+
+            </a>
+
+        </div>
+
+    </div>
+
 </section>
 
-<section id="servicios">
-    <h2>Hospedaje</h2>
-
-    <article>
-        <h3>Hotel</h3>
-        <p>Habitaciones cómodas para tu estadía.</p>
-    </article>
-
-    <article>
-        <h3>Ranchos y Cabañas</h3>
-        <p>Espacios ideales para descansar o celebrar.</p>
-    </article>
 </section>
 
-<section id="promociones">
-    <h2>Promociones</h2>
-    <p>Celebra con nosotros.</p>
+
+
+<!-- ============== OFERTAS ============== -->
+
+<section class="ofertas" id="ofertas">
+
+    <div class="oferta-imagen">
+
+        <img src="img/oferta.jpg" alt="Oferta Especial">
+
+    </div>
+
+    <div class="oferta-texto">
+
+        <span class="etiqueta">
+
+            OFERTA ESPECIAL
+
+        </span>
+
+        <h2>
+
+            Vacaciones de Ensueño
+
+        </h2>
+
+        <p>
+
+            Reserva durante este mes y obtén un <strong>20% de descuento</strong>,
+            desayuno incluido y acceso exclusivo a nuestras piscinas y playa privada.
+
+        </p>
+
+        <a href="ofertas.html" class="btn-principal">
+
+            Ver Oferta
+
+        </a>
+
+    </div>
+
 </section>
 
-<section id="menu">
-    <h2>Restaurante</h2>
-    <p>Desayunos • Almuerzos • Cenas • Postres</p>
+<!-- ============== ENTRETENIMIENTO ============== -->
+
+<section class="entretenimiento" id="entretenimiento">
+
+    <h2>Entretenimiento</h2>
+
+
+    <div class="grid-actividades">
+
+        <div class="card-actividad">
+            <img src="img/canopy.jpg">
+            <div class="info">
+                <h3>Canopy</h3>
+                <p>$10 por persona</p>
+            </div>
+        </div>
+
+        <div class="card-actividad">
+            <img src="img/crucero.jpg">
+            <div class="info">
+                <h3>Crucero Sunset</h3>
+                <p>$80 por persona</p>
+            </div>
+        </div>
+
+        <div class="card-actividad">
+            <img src="img/yate.jpg">
+            <div class="info">
+                <h3>Yate Privado</h3>
+                <p>$60 por persona</p>
+            </div>
+        </div>
+
+        <div class="card-actividad">
+            <img src="img/buceo.jpg">
+            <div class="info">
+                <h3>Buceo</h3>
+                <p>$25 por persona</p>
+            </div>
+        </div>
+
+        <div class="card-actividad">
+            <img src="img/lancha.jpg">
+            <div class="info">
+                <h3>Lancha</h3>
+                <p>$20 por persona</p>
+            </div>
+        </div>
+
+        <div class="card-actividad">
+            <img src="img/voleibol.jpg">
+            <div class="info">
+                <h3>Voleibol</h3>
+                <p>$5 por persona</p>
+            </div>
+        </div>
+
+        <div class="card-actividad">
+            <img src="img/paracaidas.jpg">
+            <div class="info">
+                <h3>Paracaídas Acuático</h3>
+                <p>$15 por persona</p>
+            </div>
+        </div>
+
+        <div class="card-actividad">
+            <img src="img/spa.jpg">
+            <div class="info">
+                <h3>Spa Tropical</h3>
+                <p>$40 por persona</p>
+            </div>
+        </div>
+
+    </div>
+
 </section>
 
-<section id="contacto">
+<!-- ================= RESEÑAS ================= -->
+
+<section class="resenas" id="resenas">
+
+    <h2>Lo que dicen nuestros huéspedes</h2>
+
+    <div class="contenedor-resenas">
+
+        <div class="resena">
+
+            <img src="img/cliente1.jpg" alt="Cliente">
+
+            <h3>María López</h3>
+
+            <div class="estrellas">★★★★★</div>
+
+            <p>
+                Un lugar espectacular. Las instalaciones son hermosas y el servicio fue excelente. Sin duda volveré.
+            </p>
+
+        </div>
+
+        <div class="resena">
+
+            <img src="img/cliente2.jpg" alt="Cliente">
+
+            <h3>Carlos Hernández</h3>
+
+            <div class="estrellas">★★★★★</div>
+
+            <p>
+                El hotel tiene una vista increíble al mar. Todo muy limpio y el personal muy amable.
+            </p>
+
+        </div>
+
+        <div class="resena">
+
+            <img src="img/cliente3.jpg" alt="Cliente">
+
+            <h3>Sofía Martínez</h3>
+
+            <div class="estrellas">★★★★★</div>
+
+            <p>
+                Las mejores vacaciones que hemos tenido. Recomiendo Costa Dorada Resort para toda la familia.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ================= CONTACTO ================= -->
+
+<section class="contacto" id="contacto">
+
     <h2>Contáctanos</h2>
-    <button>Reservar</button>
+
+    <p>
+        ¿Tienes dudas? Será un placer atenderte.
+    </p>
+
+    <div class="contenido-contacto">
+
+        <div class="info-contacto">
+
+            <h3>Información</h3>
+
+            <p>📍 Playa Costa Dorada, El Salvador</p>
+
+            <p>📞 +503 2222-2222</p>
+
+            <p>📧 contacto@costadorada.com</p>
+
+            <p>🕘 Lunes a Domingo<br>8:00 a.m. - 8:00 p.m.</p>
+
+        </div>
+
+        <form class="formulario">
+
+            <input type="text" placeholder="Nombre completo" required>
+
+            <input type="email" placeholder="Correo electrónico" required>
+
+            <textarea rows="6" placeholder="Escribe tu mensaje"></textarea>
+
+            <button type="submit" class="btn-principal">
+
+                Enviar Mensaje
+
+            </button>
+
+        </form>
+
+    </div>
+
 </section>
 
-</main>
+<!-- ================= FOOTER ================= -->
 
 <footer>
-    <p>© Costa Dorada Resort</p>
-</footer>
 
+    <div class="footer-contenido">
+
+        <div>
+
+            <h3>Costa Dorada Resort</h3>
+
+            <p>
+                Vive una experiencia inolvidable frente al mar.
+            </p>
+
+        </div>
+
+        <div>
+
+            <h3>Enlaces</h3>
+
+            <ul>
+
+                <li><a href="#inicio">Inicio</a></li>
+
+                <li><a href="ranchos.html">Ranchos</a></li>
+
+                <li><a href="hotel.html">Hotel</a></li>
+
+                <li><a href="#ofertas">Ofertas</a></li>
+
+                <li><a href="#contacto">Contacto</a></li>
+
+            </ul>
+
+        </div>
+
+        <div>
+
+            <h3>Síguenos</h3>
+
+            <p>Facebook</p>
+
+            <p>Instagram</p>
+
+            <p>TikTok</p>
+
+        </div>
+
+    </div>
+
+    <hr>
+
+    <p class="copyright">
+
+        © 2026 Costa Dorada Resort | Todos los derechos reservados.
+
+    </p>
+
+</footer>
+<script>
+
+let index = 0;
+
+function moverCarrusel(direccion) {
+
+    const carousel = document.getElementById("carousel");
+    const cardWidth = 240; // ancho tarjeta + margen
+
+    index += direccion;
+
+    if (index < 0) index = 0;
+
+    if (index > 5) index = 5; // ajusta según cards
+
+    carousel.style.transform = `translateX(${-index * cardWidth}px)`;
+}
+
+</script>
 </body>
+
 </html>
