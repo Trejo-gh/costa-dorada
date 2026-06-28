@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pago - Costa Dorada Resort</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        .pago-grid {
+            display: grid;
+            grid-template-columns: 1.2fr 1fr;
+            gap: 2rem;
+        }
+
+        .columna {
+            background: #fff;
+            padding: 2rem;
+            border-radius: 16px;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.1);
+        }
+
+        .columna input {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 12px;
+            border-radius: 10px;
+            border: 1px solid #ddd;
+        }
+
+        .total-box {
+            text-align: center;
+        }
+
+        .btn-pequeno {
+            width: 100%;
+            padding: 12px;
+            font-size: 0.95rem;
+        }
+
+        #descripcion {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.05rem;
+            color: #2d4a5a;
+            line-height: 1.7;
+            margin-top: 10px;
+        }
+
+        #habitacion {
+            font-family: 'Cinzel', serif;
+            color: #0b2a3b;
+        }
+
+        #agregarMasBox {
+            text-align: center;
+            margin: 20px;
+        }
+
+        @media(max-width: 768px) {
+            .pago-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <nav class="navbar">
+        <div class="logo">
+            <img src="img/logo.png" alt="">
+            <h2>Costa Dorada Resort</h2>
+        </div>
+    </nav>
+</header>
+
+<div id="agregarMasBox" style="display:none;">
+    <a href="extras.html" class="btn-principal">
+        + Agregar más (Entretenimiento y Comida)
+    </a>
+</div>
+
+<section class="opciones">
+
+    <h2>Finalizar Reserva</h2>
+
+    <div class="pago-grid">
+
+        <div class="columna">
+
+            <h3 id="habitacion">Cargando...</h3>
+            <p id="descripcion"></p>
+
+            <input type="text" placeholder="Nombre completo">
+            <input type="email" placeholder="Correo electrónico">
+            <input type="tel" placeholder="Número de teléfono">
+            <input type="text" placeholder="Número de tarjeta">
+            <input type="text" placeholder="CVV">
+
+        </div>
+
+        <div class="columna total-box">
+
+            <h3>Total a pagar</h3>
+            <h2 id="precio">—</h2>
+
+            <button class="btn-principal btn-pequeno">Pagar ahora</button>
+
+        </div>
+
+    </div>
+
+</section>
+
+<script>
+const params = new URLSearchParams(window.location.search);
+
+const tipo = params.get("tipo") || "";
+const precio = params.get("precio") || "";
+const dias = params.get("dias") || "2";
+const oferta = params.get("oferta") || "";
+
+let nombre = "";
+let descripcion = "";
+let precioFinal = "—";
+
+/* 🏨 HABITACIONES */
+if (tipo === "estandar") {
+    nombre = "Habitación Estándar";
+    descripcion = "Cómoda y tranquila para descanso total.";
+}
+else if (tipo === "deluxe") {
+    nombre = "Suite Deluxe";
+    descripcion = "Elegancia moderna con vista parcial al mar.";
+}
+else if (tipo === "presidencial") {
+    nombre = "Suite Presidencial";
+    descripcion = "Lujo total con jacuzzi y vista panorámica.";
+}
+else if (tipo === "rancho") {
+    nombre = "Rancho Privado Frente al Mar";
+    descripcion = "Piscina privada, cocina equipada y acceso directo a la playa.";
+}
+
+/* 🎁 OFERTAS */
+else if (oferta === "madre") {
+    nombre = "Día de la Madre 💐";
+    descripcion = "Buffet gourmet, música en vivo, decoración floral y experiencia familiar.";
+    precioFinal = "$180";
+}
+else if (oferta === "padre") {
+    nombre = "Día del Padre 🍖";
+    descripcion = "Parrillada premium, bebidas, música en vivo y actividades familiares.";
+    precioFinal = "$150";
+}
+else if (oferta === "nino") {
+    nombre = "Día del Niño 🎈";
+    descripcion = "Juegos, inflables, piscina infantil, regalos y diversión total.";
+    precioFinal = "$90";
+}
+else if (oferta === "independencia") {
+    nombre = "Independencia 🇸🇻";
+    descripcion = "Cena típica, show folclórico, música en vivo y cultura salvadoreña.";
+    precioFinal = "$120";
+}
+else if (oferta === "navidad") {
+    nombre = "Navidad 🎄";
+    descripcion = "Cena navideña, show especial, regalos y ambiente festivo.";
+    precioFinal = "$250";
+}
+
+/* 💰 PRECIO HABITACIONES */
+if (precio !== "" && oferta === "") {
+    precioFinal = "$" + precio + " (" + dias + " días)";
+}
+
+/* 📌 MOSTRAR */
+document.getElementById("habitacion").innerText = nombre;
+document.getElementById("descripcion").innerText = descripcion;
+document.getElementById("precio").innerText = precioFinal;
+
+</script>
+
+</body>
+</html>
