@@ -677,3 +677,222 @@ hr {
         font-size: 0.85rem;
     }
 }
+
+
+
+
+
+
+/* ===== TARJETAS CON IMAGEN DE FONDO ======================================= */
+.tarjeta {
+    border-radius: var(--borde-radio);
+    overflow: hidden;
+    margin-bottom: 2.5rem;
+    box-shadow: var(--sombra);
+    transition: var(--transition);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.tarjeta:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 16px 48px rgba(0, 20, 30, 0.18);
+}
+
+/* Overlay oscuro para legibilidad */
+.tarjeta-overlay {
+    background: rgba(11, 42, 59, 0.70);
+    /* Fondo semitransparente */
+    padding: 2.5rem 2rem;
+    backdrop-filter: blur(2px);
+    /* efecto sutil */
+    transition: var(--transition);
+}
+
+.tarjeta:hover .tarjeta-overlay {
+    background: rgba(11, 42, 59, 0.60);
+    /* un poco más claro al hover */
+}
+
+.tarjeta-contenido {
+    color: var(--blanco);
+    max-width: 800px;
+}
+
+.tarjeta-contenido h2 {
+    color: var(--blanco);
+    font-size: 2.2rem;
+}
+
+.tarjeta-contenido h2::after {
+    background: var(--tropical);
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.tarjeta-contenido > p {
+    font-size: 1.1rem;
+    opacity: 0.9;
+    margin-bottom: 1.2rem;
+}
+
+.tarjeta-contenido dt {
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: var(--tropical);
+    margin-top: 0.8rem;
+}
+
+.tarjeta-contenido dd {
+    margin-left: 0;
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 0.98rem;
+    padding-left: 1rem;
+    border-left: 3px solid var(--tropical);
+}
+
+/* Lista ul (meriendas) */
+.tarjeta-contenido ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem 1.8rem;
+    margin-top: 0.5rem;
+}
+
+.tarjeta-contenido ul li {
+    background: rgba(249, 168, 37, 0.2);
+    padding: 0.4rem 1.2rem;
+    border-radius: 50px;
+    font-weight: 500;
+    color: var(--blanco);
+    font-size: 0.95rem;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* ===== IMÁGENES DE FONDO POR CATEGORÍA ===== */
+/* Cambia las URL por tus propias imágenes */
+.card-desayunos {
+    background-image: url('https://images.unsplash.com/photo-1533089860892-a7c6f0a88666?w=800&h=400&fit=crop');
+}
+
+.card-almuerzos {
+    background-image: url('https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=800&h=400&fit=crop');
+}
+
+.card-cenas {
+    background-image: url('https://images.unsplash.com/photo-1550547660-d9450f859349?w=800&h=400&fit=crop');
+}
+
+.card-postres {
+    background-image: url('https://images.unsplash.com/photo-1551024601-bec78aea704b?w=800&h=400&fit=crop');
+}
+
+.card-bebidas {
+    background-image: url('https://images.unsplash.com/photo-1543854583-ef8a2d60cb1a?w=800&h=400&fit=crop');
+}
+
+.card-meriendas {
+    background-image: url('https://images.unsplash.com/photo-1606787366850-de6330128bfc?w=800&h=400&fit=crop');
+}
+
+
+
+
+
+
+/* ===== TABLAS DE PRECIOS ==================================================== */
+#tablas-precios {
+    margin-top: 3rem;
+}
+
+#tablas-precios h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.tabla,
+.tabla-wrapper {
+    background: var(--blanco);
+    border-radius: var(--borde-radio);
+    box-shadow: var(--sombra);
+    padding: 1.8rem 1.8rem 2rem;
+    margin-bottom: 2rem;
+    overflow-x: auto;
+}
+
+.tabla h3,
+.tabla-wrapper h3 {
+    font-family: 'Cinzel', serif;
+    font-size: 1.4rem;
+    color: var(--azul-profundo);
+    margin-bottom: 1rem;
+    border-bottom: 2px solid var(--arena);
+    padding-bottom: 0.5rem;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.98rem;
+}
+
+table thead {
+    background: var(--azul-profundo);
+    color: var(--blanco);
+}
+
+table th,
+table td {
+    padding: 12px 18px;
+    text-align: left;
+    border: none;
+}
+
+table tbody tr {
+    border-bottom: 1px solid #e9edf0;
+    transition: var(--transition);
+}
+
+table tbody tr:hover {
+    background: var(--arena);
+}
+
+table tbody tr:last-child {
+    border-bottom: none;
+}
+
+table td:last-child {
+    font-weight: 700;
+    color: var(--tropical-oscuro);
+}
+
+
+
+
+/* ===== MAIN  MANU ===== */
+.main-menu {
+    max-width: 1280px;
+    margin: 2rem auto;
+    padding: 0 2rem;
+}
+
+.main-menu > h1 {
+    font-family: 'Cinzel', serif;
+    font-size: 3rem;
+    text-align: center;
+    color: var(--azul-profundo);
+    margin-bottom: 2.5rem;
+    position: relative;
+}
+
+.main-menu > h1::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 4px;
+    background: var(--tropical);
+    margin: 0.5rem auto 0;
+    border-radius: 4px;
+}
