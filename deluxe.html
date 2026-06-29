@@ -7,72 +7,125 @@
     <title>Suite Deluxe</title>
 
     <link rel="stylesheet" href="css/style.css">
+     <!-- Tipografías -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-<header>
-    <nav class="navbar">
-        <div class="logo">
-            <img src="img/logo.png">
-            <h2>Costa Dorada Resort</h2>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <a href="index.html"><img src="img/logo.png" alt="logotipo de Costa Dorada Resort"></a>
+            </div>
+            <ul class="menu">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="index.html#entretenimiento">Entretenimiento</a></li>
+                <li><a href="index.html#resenas">Reseñas</a></li>
+                <li><a href="ranchos.html">Ranchos</a></li>
+                <li><a href="hotel.html">Hotel</a></li>
+                <li><a href="ofertas.html">Ofertas</a></li>
+                <li><a href="menu.html">Menú</a></li>
+                <li><a href="index.html#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="opciones">
+
+            <h2>Suite Deluxe</h2>
+
+            <div class="contenedor-opciones">
+
+                <!-- 1 -->
+                <div class="opcion">
+                    <img src="img/deluxe1.jpg">
+                    <h3>Deluxe Vista Mar</h3>
+
+                    <p>Vista directa al mar con ambiente elegante y relajante e incluye pase en lancha.</p>
+                    <h4>$450 (2personas) / 2 días</h4>
+
+                    <a href="pago.html?tipo=deluxe&precio=450&dias=2" class="btn">Elegir</a>
+                </div>
+
+                <!-- 2 -->
+                <div class="opcion">
+                    <img src="img/deluxe2.jpg">
+                    <h3>Deluxe Balcón Privado</h3>
+
+                    <p>Balcón privado ideal para disfrutar la brisa del mar e incluye viaje en lancha.</p>
+                    <h4>$450 (para 1 personas)/ 2 días</h4>
+
+                    <a href="pago.html?tipo=deluxe&precio=450&dias=2" class="btn">Elegir</a>
+                </div>
+
+                <!-- 3 -->
+                <div class="opcion">
+                    <img src="img/deluxe3.jpg">
+                    <h3>Deluxe King</h3>
+
+                    <p>Cama king size con máximo confort y estilo moderno incluye entrada sin costo al canopi y paseo en
+                        lancha.</p>
+                    <h4>$470 (2 personas) / 2 días</h4>
+
+                    <a href="pago.html?tipo=deluxe&precio=470&dias=2" class="btn">Elegir</a>
+                </div>
+
+                <!-- 4 -->
+                <div class="opcion">
+                    <img src="img/deluxe4.jpg">
+                    <h3>Deluxe Ejecutiva</h3>
+
+                    <p>Perfecta para descanso premium con diseño elegante y atencion vip, incluye bucear y acceso a un
+                        solo paseo en yate.</p>
+                    <h4>$500 (por personas)/ 2 días</h4>
+
+                    <a href="pago.html?tipo=deluxe&precio=500&dias=2" class="btn">Elegir</a>
+                </div>
+
+            </div>
+
+        </section>
+    </main>
+    <footer>
+        <div class="footer-contenido">
+            <div>
+                <h3>Costa Dorada Resort</h3>
+                <p>Vive una experiencia inolvidable frente al mar.</p>
+                <p>Dirección:</p>
+                <p>Costa Dorada Resort Boulevard Costa del Sol, Kilómetro 65, San Luis La Herradura, La Paz, El
+                    Salvador.
+                </p>
+            </div>
+            <div>
+                <h3>Enlaces</h3>
+                <ul>
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="ranchos.html">Ranchos</a></li>
+                    <li><a href="hotel.html">Hotel</a></li>
+                    <li><a href="#ofertas">Ofertas</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h3>Síguenos</h3>
+                <p>Facebook</p>
+                <p>Instagram</p>
+                <p>TikTok</p>
+            </div>
         </div>
-    </nav>
-</header>
 
-<section class="opciones">
+        <hr>
+        <p class="copyright">
+            © 2026 Costa Dorada Resort | Todos los derechos reservados.
+        </p>
 
-    <h2>Suite Deluxe</h2>
-
-    <div class="contenedor-opciones">
-
-        <!-- 1 -->
-        <div class="opcion">
-            <img src="img/deluxe1.jpg">
-            <h3>Deluxe Vista Mar</h3>
-
-            <p>Vista directa al mar con ambiente elegante y relajante e incluye pase en lancha.</p>
-            <h4>$450 (2personas) / 2 días</h4>
-
-            <a href="pago.html?tipo=deluxe&precio=450&dias=2" class="btn">Elegir</a>
-        </div>
-
-        <!-- 2 -->
-        <div class="opcion">
-            <img src="img/deluxe2.jpg">
-            <h3>Deluxe Balcón Privado</h3>
-
-            <p>Balcón privado ideal para disfrutar la brisa del mar e incluye viaje en lancha.</p>
-            <h4>$450 (para 1 personas)/ 2 días</h4>
-
-            <a href="pago.html?tipo=deluxe&precio=450&dias=2" class="btn">Elegir</a>
-        </div>
-
-        <!-- 3 -->
-        <div class="opcion">
-            <img src="img/deluxe3.jpg">
-            <h3>Deluxe King</h3>
-
-            <p>Cama king size con máximo confort y estilo moderno incluye entrada sin costo al canopi y paseo en lancha.</p>
-            <h4>$470 (2 personas) / 2 días</h4>
-
-            <a href="pago.html?tipo=deluxe&precio=470&dias=2" class="btn">Elegir</a>
-        </div>
-
-        <!-- 4 -->
-        <div class="opcion">
-            <img src="img/deluxe4.jpg">
-            <h3>Deluxe Ejecutiva</h3>
-
-            <p>Perfecta para descanso premium con diseño elegante y atencion vip, incluye bucear y acceso a un solo paseo en yate.</p>
-            <h4>$500 (por personas)/ 2 días</h4>
-
-            <a href="pago.html?tipo=deluxe&precio=500&dias=2" class="btn">Elegir</a>
-        </div>
-
-    </div>
-
-</section>
+    </footer>
 
 </body>
 </html>
