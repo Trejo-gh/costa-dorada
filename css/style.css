@@ -896,3 +896,95 @@ table td:last-child {
     margin: 0.5rem auto 0;
     border-radius: 4px;
 }
+
+
+/*==================================   HAMBURGER   =================================*/
+/* ===== MENÚ HAMBURGUESA ===== */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    padding: 8px 0;
+    z-index: 1001;
+}
+
+.hamburger span {
+    display: block;
+    width: 28px;
+    height: 3px;
+    background: var(--azul-profundo);
+    border-radius: 4px;
+    transition: var(--transition);
+}
+
+/* Animación al activarse (lo controlamos con JS) */
+.hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+.hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* ===== RESPONSIVE MENÚ ===== */
+@media (max-width: 768px) {
+    .hamburger {
+        display: flex;
+    }
+
+    .menu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: var(--blanco);
+        flex-direction: column;
+        align-items: center;
+        padding: 1.5rem 0;
+        gap: 0.8rem;
+        box-shadow: var(--sombra);
+        transform: translateY(-120%);
+        transition: transform 0.3s ease;
+        /* oculto por defecto */
+        opacity: 0;
+        pointer-events: none;
+        transition: all 0.3s ease;
+    }
+
+    .menu.active {
+        transform: translateY(0);
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+    .menu a {
+        font-size: 1.1rem;
+        padding: 0.6rem 0;
+        border-bottom: none;
+        width: 100%;
+        text-align: center;
+    }
+
+    .menu a:hover {
+        background: var(--arena);
+        border-bottom: none;
+    }
+
+    /* Ajuste del header para que sea fijo y no tape el contenido */
+    header {
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+    }
+
+    .navbar {
+        padding: 0.6rem 1rem;
+    }
+
+    .logo img {
+        height: 60px; /* un poco más pequeño en móvil */
+    }
+}

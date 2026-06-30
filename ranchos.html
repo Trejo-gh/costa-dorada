@@ -21,17 +21,22 @@
     <header>
         <nav class="navbar">
             <div class="logo">
-                <a href="index.html"><img src="img/logo.png" alt="Costa Dorada Resort"></a>
+                <a href="#inicio"><img src="img/logo.png" alt="Costa Dorada Resort"></a>
             </div>
-            <ul class="menu">
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="index.html#entretenimiento">Entretenimiento</a></li>
-                <li><a href="index.html#resenas">Reseñas</a></li>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="menu" id="menu">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#entretenimiento">Entretenimiento</a></li>
+                <li><a href="#resenas">Reseñas</a></li>
                 <li><a href="ranchos.html">Ranchos</a></li>
                 <li><a href="hotel.html">Hotel</a></li>
                 <li><a href="ofertas.html">Ofertas</a></li>
                 <li><a href="menu.html">Menú</a></li>
-                <li><a href="index.html#contacto">Contacto</a></li>
+                <li><a href="#contacto">Contacto</a></li>
             </ul>
         </nav>
     </header>
@@ -152,6 +157,24 @@
 
     </footer>
 
+
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const menu = document.getElementById('menu');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            menu.classList.toggle('active');
+        });
+
+        // Cerrar el menú al hacer clic en un enlace (mejora UX)
+        document.querySelectorAll('.menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                menu.classList.remove('active');
+            });
+        });
+    </script>
 </body>
 
 </html>
