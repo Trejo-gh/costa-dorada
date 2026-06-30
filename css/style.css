@@ -988,3 +988,72 @@ table td:last-child {
         height: 60px; /* un poco más pequeño en móvil */
     }
 }
+
+
+
+/*==============================================================================*/
+/* ===== RESPONSIVE CONTACTO ===== */
+@media (max-width: 768px) {
+    /* El contenedor principal pasa a una sola columna */
+    .contenido-contacto {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        padding: 1.5rem;
+        text-align: center; /* centra el texto de información */
+    }
+
+    /* La información de contacto se alinea al centro */
+    .info-contacto {
+        text-align: center;
+    }
+    .info-contacto p {
+        justify-content: center; /* si usas flex, pero no es necesario */
+    }
+
+    /* El formulario ocupa todo el ancho */
+    .formulario {
+        width: 100%;
+    }
+
+    /* Los inputs y textarea ocupan el 100% y tienen un tamaño de fuente mayor para móviles */
+    .formulario input,
+    .formulario textarea {
+        font-size: 1rem; /* ya lo tienes, pero asegura que no sea menor */
+        padding: 14px 18px; /* un poco más de altura para facilitar el tacto */
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    /* El botón ocupa todo el ancho y se centra */
+    .formulario button {
+        width: 100%;
+        align-self: center;
+        text-align: center;
+        padding: 16px 20px; /* más altura para mejor toque */
+        font-size: 1.1rem;
+    }
+
+    /* Ajuste del padding de la sección contacto */
+    .contacto {
+        padding: 3rem 1.2rem;
+    }
+}
+
+/* ===== MEJORA OPCIONAL: PARA PANTALLAS MUY PEQUEÑAS ( < 480px ) ===== */
+@media (max-width: 480px) {
+    .contenido-contacto {
+        padding: 1rem;
+        border-radius: 12px;
+    }
+
+    .formulario input,
+    .formulario textarea {
+        font-size: 0.95rem;
+        padding: 12px 14px;
+    }
+
+    .formulario button {
+        font-size: 1rem;
+        padding: 14px 16px;
+    }
+}
