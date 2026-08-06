@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ranchos - Costa Dorada Resort</title>
 
+    <link rel="stylesheet" href="./css/output.css">
     <link rel="stylesheet" href="css/style.css">
 
     <!-- Tipografías -->
@@ -22,7 +23,12 @@
             <div class="logo">
                 <a href="index.html"><img src="img/logo.png" alt="Costa Dorada Resort"></a>
             </div>
-            <ul class="menu">
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="menu" id="menu">
                 <li><a href="index.html">Inicio</a></li>
                 <li><a href="index.html#entretenimiento">Entretenimiento</a></li>
                 <li><a href="index.html#resenas">Reseñas</a></li>
@@ -30,7 +36,7 @@
                 <li><a href="hotel.html">Hotel</a></li>
                 <li><a href="ofertas.html">Ofertas</a></li>
                 <li><a href="menu.html">Menú</a></li>
-                <li><a href="index.html#contacto">Contacto</a></li>
+                <li><a href="#contacto">Contacto</a></li>
             </ul>
         </nav>
     </header>
@@ -62,7 +68,7 @@
             <div class="contenedor-opciones">
 
                 <div class="opcion">
-                    <img src="img/rancho1.jpg" alt="Rancho 1">
+                    <img src="img/rancho1.jpg" alt="Rancho con piscina en forma de cruz">
                     <h3>Rancho Paraíso Azul</h3>
                     <p>Vista directa al mar con ambiente tropical relajante.</p>
                     <h4>$600 (10 personas) / 2 días</h4>
@@ -70,7 +76,7 @@
                 </div>
 
                 <div class="opcion">
-                    <img src="img/rancho2.jpg" alt="Rancho 2">
+                    <img src="img/rancho2.jpg" alt="Rancho con multiples amacas y mesas">
                     <h3>Rancho Brisa Tropical</h3>
                     <p>Rodeado de palmeras y naturaleza frente a la playa.</p>
                     <h4>$600 (10 personas) / 2 días</h4>
@@ -151,6 +157,24 @@
 
     </footer>
 
+
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const menu = document.getElementById('menu');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            menu.classList.toggle('active');
+        });
+
+        // Cerrar el menú al hacer clic en un enlace (mejora UX)
+        document.querySelectorAll('.menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                menu.classList.remove('active');
+            });
+        });
+    </script>
 </body>
 
 </html>

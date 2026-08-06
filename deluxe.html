@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Suite Deluxe</title>
 
+    <link rel="stylesheet" href="./css/output.css">
     <link rel="stylesheet" href="css/style.css">
      <!-- Tipografías -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -19,9 +20,14 @@
     <header>
         <nav class="navbar">
             <div class="logo">
-                <a href="index.html"><img src="img/logo.png" alt="logotipo de Costa Dorada Resort"></a>
+                <a href="index.html"><img src="img/logo.png" alt="Costa Dorada Resort"></a>
             </div>
-            <ul class="menu">
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="menu" id="menu">
                 <li><a href="index.html">Inicio</a></li>
                 <li><a href="index.html#entretenimiento">Entretenimiento</a></li>
                 <li><a href="index.html#resenas">Reseñas</a></li>
@@ -29,7 +35,7 @@
                 <li><a href="hotel.html">Hotel</a></li>
                 <li><a href="ofertas.html">Ofertas</a></li>
                 <li><a href="menu.html">Menú</a></li>
-                <li><a href="index.html#contacto">Contacto</a></li>
+                <li><a href="#contacto">Contacto</a></li>
             </ul>
         </nav>
     </header>
@@ -43,7 +49,7 @@
 
                 <!-- 1 -->
                 <div class="opcion">
-                    <img src="img/deluxe1.jpg">
+                    <img src="img/deluxe1.jpg" alt="habitacion moderna y elegante con impresionante vista al mar">
                     <h3>Deluxe Vista Mar</h3>
 
                     <p>Vista directa al mar con ambiente elegante y relajante e incluye pase en lancha.</p>
@@ -54,7 +60,7 @@
 
                 <!-- 2 -->
                 <div class="opcion">
-                    <img src="img/deluxe2.jpg">
+                    <img src="img/deluxe2.jpg" alt="habitacion pequeña, acojedora con balcon"
                     <h3>Deluxe Balcón Privado</h3>
 
                     <p>Balcón privado ideal para disfrutar la brisa del mar e incluye viaje en lancha.</p>
@@ -65,11 +71,10 @@
 
                 <!-- 3 -->
                 <div class="opcion">
-                    <img src="img/deluxe3.jpg">
+                    <img src="img/deluxe3.jpg" alt="habitacion amplia para 2 personas con mucha comodidad y estilo">
                     <h3>Deluxe King</h3>
 
-                    <p>Cama king size con máximo confort y estilo moderno incluye entrada sin costo al canopi y paseo en
-                        lancha.</p>
+                    <p>Cama king size con máximo confort y estilo moderno incluye entrada sin costo al canopi y paseo en lancha.</p>
                     <h4>$470 (2 personas) / 2 días</h4>
 
                     <a href="pago.html?tipo=deluxe&precio=470&dias=2" class="btn">Elegir</a>
@@ -77,11 +82,10 @@
 
                 <!-- 4 -->
                 <div class="opcion">
-                    <img src="img/deluxe4.jpg">
+                    <img src="img/deluxe4.jpg" alt="habitacion de lujo con todo tipo de comodidades">
                     <h3>Deluxe Ejecutiva</h3>
 
-                    <p>Perfecta para descanso premium con diseño elegante y atencion vip, incluye bucear y acceso a un
-                        solo paseo en yate.</p>
+                    <p>Perfecta para descanso premium con diseño elegante y atencion vip, incluye bucear y acceso a un solo paseo en yate.</p>
                     <h4>$500 (por personas)/ 2 días</h4>
 
                     <a href="pago.html?tipo=deluxe&precio=500&dias=2" class="btn">Elegir</a>
@@ -91,6 +95,7 @@
 
         </section>
     </main>
+
     <footer>
         <div class="footer-contenido">
             <div>
@@ -126,6 +131,24 @@
         </p>
 
     </footer>
+
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const menu = document.getElementById('menu');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            menu.classList.toggle('active');
+        });
+
+        // Cerrar el menú al hacer clic en un enlace (mejora UX)
+        document.querySelectorAll('.menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                menu.classList.remove('active');
+            });
+        });
+    </script>
 
 </body>
 </html>

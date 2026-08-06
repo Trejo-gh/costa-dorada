@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Suite Presidencial</title>
 
+    <link rel="stylesheet" href="./css/output.css">
     <link rel="stylesheet" href="css/style.css">
      <!-- Tipografías -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -21,7 +22,12 @@
             <div class="logo">
                 <a href="index.html"><img src="img/logo.png" alt="Costa Dorada Resort"></a>
             </div>
-            <ul class="menu">
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="menu" id="menu">
                 <li><a href="index.html">Inicio</a></li>
                 <li><a href="index.html#entretenimiento">Entretenimiento</a></li>
                 <li><a href="index.html#resenas">Reseñas</a></li>
@@ -29,7 +35,7 @@
                 <li><a href="hotel.html">Hotel</a></li>
                 <li><a href="ofertas.html">Ofertas</a></li>
                 <li><a href="menu.html">Menú</a></li>
-                <li><a href="index.html#contacto">Contacto</a></li>
+                <li><a href="#contacto">Contacto</a></li>
             </ul>
         </nav>
     </header>
@@ -42,17 +48,16 @@
             <div class="contenedor-opciones">
 
                 <div class="opcion">
-                    <img src="img/presidencial1.jpg">
+                    <img src="img/presidencial1.jpg" alt="habitacion con las mejores vistas del hotel y lleno de lujos">
                     <h3>Presidencial Ocean View</h3>
                     <p>Vista panorámica al océano con lujo total y espacios amplios entrada a restaurante sin costo.</p>
                     <h4>$600 (2 personas)/ 2 días</h4>
 
-                    <!-- SOLO ARREGLÉ EL LINK -->
                     <a href="pago.html?tipo=presidencial&precio=600&dias=2" class="btn">Elegir</a>
                 </div>
 
                 <div class="opcion">
-                    <img src="img/presidencial2.jpg">
+                    <img src="img/presidencial2.jpg" alt="habitacion donde el lujo y estilo moderno se llevan de la mano">
                     <h3>Presidencial Luxury Suite</h3>
                     <p>Suite de lujo con jacuzzi privado y diseño exclusivo, uso de yate sin limite por los 2 días.</p>
                     <h4>$700 (2 personas) / 2 días</h4>
@@ -61,7 +66,7 @@
                 </div>
 
                 <div class="opcion">
-                    <img src="img/presidencial3.jpg">
+                    <img src="img/presidencial3.jpg" alt="habitacion llena de lujos y todo tipo de servicios">
                     <h3>Presidencial VIP</h3>
                     <p>La experiencia más exclusiva del resort con servicio premium con viaje en yate durante 2 dias,
                         paseo en crucero por un dia y entrada sin costo al restaurante.</p>
@@ -111,6 +116,23 @@
 
     </footer>
 
+        <script>
+        const hamburger = document.getElementById('hamburger');
+        const menu = document.getElementById('menu');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            menu.classList.toggle('active');
+        });
+
+        // Cerrar el menú al hacer clic en un enlace (mejora UX)
+        document.querySelectorAll('.menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                menu.classList.remove('active');
+            });
+        });
+    </script>
 </body>
 
 </html>

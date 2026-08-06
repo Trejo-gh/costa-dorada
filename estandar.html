@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Habitaciones Estándar</title>
 
+    <link rel="stylesheet" href="./css/output.css">
     <link rel="stylesheet" href="css/style.css">
      <!-- Tipografías -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -21,7 +22,12 @@
             <div class="logo">
                 <a href="index.html"><img src="img/logo.png" alt="Costa Dorada Resort"></a>
             </div>
-            <ul class="menu">
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="menu" id="menu">
                 <li><a href="index.html">Inicio</a></li>
                 <li><a href="index.html#entretenimiento">Entretenimiento</a></li>
                 <li><a href="index.html#resenas">Reseñas</a></li>
@@ -29,7 +35,7 @@
                 <li><a href="hotel.html">Hotel</a></li>
                 <li><a href="ofertas.html">Ofertas</a></li>
                 <li><a href="menu.html">Menú</a></li>
-                <li><a href="index.html#contacto">Contacto</a></li>
+                <li><a href="#contacto">Contacto</a></li>
             </ul>
         </nav>
     </header>
@@ -43,7 +49,7 @@
 
                 <!-- 1 -->
                 <div class="opcion">
-                    <img src="img/estandar1.jpg">
+                    <img src="img/estandar1.jpg" alt="habitacoin para 2 personas con vista a un jardin">
                     <h3>Estándar Jardín</h3>
                     <p>Habitación tranquila con vista al jardín, ideal para descanso relajado.</p>
                     <h4>$300 (2 personas) / 2 días</h4>
@@ -53,7 +59,7 @@
 
                 <!-- 2 -->
                 <div class="opcion">
-                    <img src="img/estandar2.jpg">
+                    <img src="img/estandar2.jpg" alt="habitación para 2 personas con vista parcial al mar">
                     <h3>Estándar Vista Parcial</h3>
                     <p>Pequeña vista al mar con ambiente cómodo y fresco.</p>
                     <h4>$300 (2personas) / 2 días</h4>
@@ -63,7 +69,7 @@
 
                 <!-- 3 -->
                 <div class="opcion">
-                    <img src="img/estandar3.jpg">
+                    <img src="img/estandar3.jpg" alt="habitación para 2 personas con dos camas amplias">
                     <h3>Estándar Doble</h3>
                     <p>Perfecta para parejas o amigos con dos camas amplias.</p>
                     <h4>$300 (2 personas)/ 2 días</h4>
@@ -73,7 +79,7 @@
 
                 <!-- 4 -->
                 <div class="opcion">
-                    <img src="img/estandar4.jpg">
+                    <img src="img/estandar4.jpg" alt="habitación para 6 personas con gran espacio y 4 camas">
                     <h3>Estándar Familiar</h3>
                     <p>Espacio amplio para familias pequeñas con comodidad total.</p>
                     <h4>$300 (6 personas) / 2 días</h4>
@@ -83,7 +89,7 @@
 
                 <!-- 5 -->
                 <div class="opcion">
-                    <img src="img/estandar5.jpg">
+                    <img src="img/estandar5.jpg" alt="habitacion pequeña con una cama">
                     <h3>Estándar Económica</h3>
                     <p>Opción accesible con lo básico para una estancia cómoda.</p>
                     <h4>$100 (por 1 persona) / 2 días</h4>
@@ -93,9 +99,9 @@
 
                 <!-- 6 -->
                 <div class="opcion">
-                    <img src="img/estandar6.jpg">
+                    <img src="img/estandar6.jpg" alt="habitacion moderna para 2 personas">
                     <h3>Estándar Premium</h3>
-                    <p>Mejorada con acabados modernos y solo desayuno inluicos los 2 dás.</p>
+                    <p>Mejorada con acabados modernos y desayuno inluido los 2 dás.</p>
                     <h4>$350 (2 personas)/ 2 días</h4>
 
                     <a href="pago.html?tipo=estandar&precio=350&dias=2" class="btn">Elegir</a>
@@ -142,6 +148,23 @@
 
     </footer>
 
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const menu = document.getElementById('menu');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            menu.classList.toggle('active');
+        });
+
+        // Cerrar el menú al hacer clic en un enlace (mejora UX)
+        document.querySelectorAll('.menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                menu.classList.remove('active');
+            });
+        });
+    </script>
 </body>
 
 </html>

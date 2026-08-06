@@ -790,7 +790,7 @@ hr {
 }
 
 .card-bebidas {
-    background-image: url('https://images.unsplash.com/photo-1543854583-ef8a2d60cb1a?w=800&h=400&fit=crop');
+    background-image: url('https://recetinas.com/wp-content/uploads/2022/09/bebidas-alcoholicas.jpg');
 }
 
 .card-meriendas {
@@ -895,4 +895,165 @@ table td:last-child {
     background: var(--tropical);
     margin: 0.5rem auto 0;
     border-radius: 4px;
+}
+
+
+/*==================================   HAMBURGER   =================================*/
+/* ===== MENÚ HAMBURGUESA ===== */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    padding: 8px 0;
+    z-index: 1001;
+}
+
+.hamburger span {
+    display: block;
+    width: 28px;
+    height: 3px;
+    background: var(--azul-profundo);
+    border-radius: 4px;
+    transition: var(--transition);
+}
+
+/* Animación al activarse (lo controlamos con JS) */
+.hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+.hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* ===== RESPONSIVE MENÚ ===== */
+@media (max-width: 768px) {
+    .hamburger {
+        display: flex;
+    }
+
+    .menu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: var(--blanco);
+        flex-direction: column;
+        align-items: center;
+        padding: 1.5rem 0;
+        gap: 0.8rem;
+        box-shadow: var(--sombra);
+        transform: translateY(-120%);
+        transition: transform 0.3s ease;
+        /* oculto por defecto */
+        opacity: 0;
+        pointer-events: none;
+        transition: all 0.3s ease;
+    }
+
+    .menu.active {
+        transform: translateY(0);
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+    .menu a {
+        font-size: 1.1rem;
+        padding: 0.6rem 0;
+        border-bottom: none;
+        width: 100%;
+        text-align: center;
+    }
+
+    .menu a:hover {
+        background: var(--arena);
+        border-bottom: none;
+    }
+
+    /* Ajuste del header para que sea fijo y no tape el contenido */
+    header {
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+    }
+
+    .navbar {
+        padding: 0.6rem 1rem;
+    }
+
+    .logo img {
+        height: 60px; /* un poco más pequeño en móvil */
+    }
+}
+
+
+
+/*==============================================================================*/
+/* ===== RESPONSIVE CONTACTO ===== */
+@media (max-width: 768px) {
+    /* El contenedor principal pasa a una sola columna */
+    .contenido-contacto {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        padding: 1.5rem;
+        text-align: center; /* centra el texto de información */
+    }
+
+    /* La información de contacto se alinea al centro */
+    .info-contacto {
+        text-align: center;
+    }
+    .info-contacto p {
+        justify-content: center; /* si usas flex, pero no es necesario */
+    }
+
+    /* El formulario ocupa todo el ancho */
+    .formulario {
+        width: 100%;
+    }
+
+    /* Los inputs y textarea ocupan el 100% y tienen un tamaño de fuente mayor para móviles */
+    .formulario input,
+    .formulario textarea {
+        font-size: 1rem; /* ya lo tienes, pero asegura que no sea menor */
+        padding: 14px 18px; /* un poco más de altura para facilitar el tacto */
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    /* El botón ocupa todo el ancho y se centra */
+    .formulario button {
+        width: 100%;
+        align-self: center;
+        text-align: center;
+        padding: 16px 20px; /* más altura para mejor toque */
+        font-size: 1.1rem;
+    }
+
+    /* Ajuste del padding de la sección contacto */
+    .contacto {
+        padding: 3rem 1.2rem;
+    }
+}
+
+/* ===== MEJORA OPCIONAL: PARA PANTALLAS MUY PEQUEÑAS ( < 480px ) ===== */
+@media (max-width: 480px) {
+    .contenido-contacto {
+        padding: 1rem;
+        border-radius: 12px;
+    }
+
+    .formulario input,
+    .formulario textarea {
+        font-size: 0.95rem;
+        padding: 12px 14px;
+    }
+
+    .formulario button {
+        font-size: 1rem;
+        padding: 14px 16px;
+    }
 }
